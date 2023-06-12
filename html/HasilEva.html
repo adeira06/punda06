@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Belajar Evaluasi</title>
+    <link rel="stylesheet" href="halhasileva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <a href="#" class="logo">Akun Guru</a>
+    <div class="menu-content">
+        <ul class="menu-items">
+            <li class="item">
+                <a href="halamanguru.html">Data Siswa</a>
+            </li>
+            <li class="item">
+                <a href="dataguru.html">Data Guru</a>
+            </li>
+            <li class="item">
+                <a href="rekaptugas.html">Rekap Tugas</a>
+            </li>
+            <!-- <li class="item">
+            <a href="profil.html">Profil</a>
+        </li> -->
+            <li class="item">
+                <div class="submenu-item">
+                    <span>Hasil Belajar</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="menu-items submenu">
+                    <div class="menu-title">
+                        <i class="fas fa-chevron-left"></i>
+                        Kembali
+                    </div>
+                    <li class="item">
+                        <a href="HasilK1.html">Kuis Tabel</a>
+                    </li>
+                    <li class="item">
+                        <a href="HasilK2.html">Kuis Data</a>
+                    </li>
+                    <li class="item">
+                        <a href="HasilEva.html">Evaluasi</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="utama.html">Keluar</a>
+            </li>
+    </div>
+</nav>
+    <nav class="navbar">
+        <i class="fas fa-bars" id="sidebar-close"> Hasil Belajar Evaluasi</i>
+    </nav>
+    <main class="main">
+        <div class="card"  style="height: 500px;">
+        <table id="example">
+            <thead>
+                <th>NAMA</th>
+                <th>KELAS</th>
+                <th>Nilai</th>
+                <th>Jawaban Siswa</th>
+                <th>Tanggal</th>
+                <th>Waktu</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="namaUser"></td>
+                    <td id="classUser"></td>
+                    <td id="score"></td>
+                    <td id="jwbSiswa"></td>
+                    <td id="tanggal"></td>
+                    <td id="waktu"></td>
+                </tr>
+            </tbody>
+        </table>
+</main>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+
+<script>
+    const sidebar = document.querySelector(".sidebar");
+const sidebarClose = document.querySelector("#sidebar-close");
+const menu = document.querySelector(".menu-content");
+const menuItems = document.querySelectorAll(".submenu-item");
+const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+
+menuItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    menu.classList.add("submenu-active");
+    item.classList.add("show-submenu");
+    menuItems.forEach((item2, index2) => {
+      if (index !== index2) {
+        item2.classList.remove("show-submenu");
+      }
+    });
+  });
+});
+
+subMenuTitles.forEach((title) => {
+  title.addEventListener("click", () => {
+    menu.classList.remove("submenu-active");
+  });
+});
+</script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+            apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+            authDomain: "punda-0612.firebaseapp.com",
+            databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+            projectId: "punda-0612",
+            storageBucket: "punda-0612.appspot.com",
+            messagingSenderId: "490129650306",
+            appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+            };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  // Mendapatkan referensi ke tabel "evaluasi" di Firebase Realtime Database
+var evaluasiRef = database.ref("evaluasi");
+
+// Mendapatkan data dari tabel
+var table = document.getElementById("example");
+var row = table.rows[1]; // Mengambil baris pertama dari tbody (indeks 0 untuk thead)
+
+// Membaca nilai dari setiap sel dalam baris
+var nama = row.cells[0].innerText;
+var kelas = row.cells[1].innerText;
+var soal = [];
+for (var i = 2; i < 22; i++) {
+  soal.push(row.cells[i].innerText);
+}
+var keterangan = row.cells[22].innerText;
+
+// Membuat objek data evaluasi
+var evaluasiData = {
+  nama : nameUser,
+    kelas : classUser,
+    nilai : score,
+    jawaban: jwbSiswa,
+    tanggal : tanggal,
+    waktu : waktu
+};
+
+// Menyimpan data evaluasi ke Firebase
+evaluasiRef.push(evaluasiData, function(error) {
+  if (error) {
+    console.log("Gagal menyimpan data evaluasi ke Firebase: " + error);
+  } else {
+    console.log("Data evaluasi berhasil disimpan ke Firebase");
+  }
+});
+
+const database = firebase.database();
+  database.ref("evaluasi").push(data);
+
+</script>
+</body>
+</html>

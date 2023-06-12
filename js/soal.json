@@ -1,0 +1,1207 @@
+[
+    {
+        "question" : "Siti dan teman-temanya hampir setiap hari berkunjung ke perpustakaan.<br>
+                Mereka belajar bersama di perpustakaan. Perpustakaan sekolah Siti 
+                menyediakan fasilitas meja dan kursi untuk belajar dan setiap siswa 
+                diberi kesempatan untuk meminjam buku di perpustakaan. <br>
+                Berikut data peminjam buku di perpustakaan. <br>
+        [
+            {
+                "Buku/Hari" : "Merah",
+                "Senin" : "",
+                "Selasa" : "",
+                "Rabu" : "",
+                "Kamis" : "",
+                "Jumat" : ""
+            },
+            {
+                "Buku/Hari" : "Biru",
+                "Senin" : "",
+                "Selasa" : "",
+                "Rabu" : "",
+                "Kamis" : "",
+                "Jumat" : ""
+            },
+            {
+                "Buku/Hari" : "Kuning",
+                "Senin" : "",
+                "Selasa" : "",
+                "Rabu" : "",
+                "Kamis" : "",
+                "Jumat" : ""
+            }
+        ]<br>
+        Diagram yang sesuai dengan tabel diatas adalah . . .",
+        "a" : {
+            "tag": "img",
+            "src": "1a.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "b" : {
+            "tag": "img",
+            "src": "1b.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "c" : {
+            "tag": "img",
+            "src": "1c.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "d" : {
+            "tag": "img",
+            "src": "1d.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "e" : {
+                "tag": "img",
+                "src": "1e.png",
+                "style": "width: 350px; height: auto;"
+        },  
+        "benar" : "b"
+    },
+    {
+        "soal1" : "Perhatikan data dibawah ini! <br>",
+        {
+            "tag": "img",
+            "src": "1b.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Hari peminjaman buku merah paling sedikit adalah hari",
+        "a" : "Senin",
+        "b" : "Selasa",
+        "c" : "Rabu",
+        "d" : "Kamis",
+        "e" : "Jumat",
+        "benar" : "b"
+    },
+    {
+        "soal2" : "lihatlah diagram data dibawah ini!",
+        {
+            "tag": "img",
+            "src": "1b.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Hari peminjaman buku kuning paling banyak adalah hari ...",
+        "a" : "Senin",
+        "b" : "Selasa",
+        "c" : "Rabu",
+        "d" : "Kamis",
+        "e" : "Jumat",
+        "benar" : "e" 
+    },
+    {
+        "soal3" : "Berikut adalah nilai ulangan Matematika siswa kelas IV. <br>
+        65 70 85 90 75 70 75  85 90 75 80 60 85 90 85 80 75 <br>
+        75 85 80 80 90 85 80 85 70 80 85 85 60 70 95 80 <br> 
+        85 100 60 75 65 60 100 65 80 90 95 <br>
+        Tabel yang tepat untuk data di atas adalah",
+        "a" : [
+            {
+                "60": "3",
+                "65": "3",
+                "70": "4",
+                "75": "6",
+                "80": "6",
+                "85": "5",
+                "90": "5",
+                "95": "2",
+                "100": "2",
+                "Nilai": "Banyak Anak"
+            }
+        ],
+        "b" : [
+            {
+                "60": "2",
+                "65": "4",
+                "70": "3",
+                "75": "5",
+                "80": "4",
+                "85": "5",
+                "90": "4",
+                "95": "5",
+                "100": "4",
+                "Nilai": "Banyak Anak"
+            }
+        ],
+        "c" : [
+            {
+                "60": "3",
+                "65": "3",
+                "70": "4",
+                "75": "6",
+                "80": "5",
+                "85": "3",
+                "90": "5",
+                "95": "5",
+                "100": "2",
+                "Nilai": "Banyak Anak"
+            }
+        ],
+        "d" : [
+            {
+                "60": "3",
+                "65": "3",
+                "70": "4",
+                "75": "6",
+                "80": "9",
+                "85": "10",
+                "90": "5",
+                "95": "2",
+                "100": "2",
+                "Nilai": "Banyak Anak"
+            }
+        ],
+        "e" : [
+            {
+                "60": "5",
+                "65": "5",
+                "70": "3",
+                "75": "2",
+                "80": "6",
+                "85": "3",
+                "90": "5",
+                "95": "4",
+                "100": "3",
+                "Nilai": "Banyak Anak"
+            }
+        ],
+        "benar" : "a"
+    },
+    {
+        "soal4" : "Tono sedang melakukan tugas untuk mengukur kecambah selama 5 hari. <br> Berikut data pertumbuhan kecambah",
+        {
+            "tag": "img",
+            "src": "5.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Ukuran tanaman kecambah yang paling tinggi dan paling pendek terdapat 
+        pada hari ke- ",
+        "a" : "3 dan 4",
+        "b" : "1 dan 5",
+        "c" : "4 dan 2",
+        "d" : "2 dan 3",
+        "e" : "5 dan 1",
+        "benar" : "e"
+    },
+    {
+        "soal5" : "Berikut data golongan darah siswa kelas V!",
+        {
+            "tag": "img",
+            "src": "6.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Tabel yang tepat untuk data di atas adalah ...",
+        "a" : {
+            "Golongan Darah": "Banyak siswa",
+            "A": "3",
+            "AB": "6",
+            "B": "5",
+            "O": "7"
+        },
+        "b" : {
+            "Golongan Darah": "Banyak siswa",
+            "A": "7",
+            "AB": "6",
+            "B": "5",
+            "O": "3"
+        },
+        "c" : {
+            "Golongan Darah": "Banyak siswa",
+            "A": "6",
+            "AB": "3",
+            "B": "7",
+            "O": "5"
+        },
+        "d" : {
+            "Golongan Darah": "Banyak siswa",
+            "A": "3",
+            "AB": "5",
+            "B": "6",
+            "O": "7"
+        },
+        "e" : {
+            "Golongan Darah": "Banyak siswa",
+            "A": "3",
+            "AB": "6",
+            "B": "7",
+            "O": "5"
+        },
+        "benar" : "c"
+    },
+    {
+        "soal6" : "Berikut data umur siswa kelas IV",
+        [
+            {
+                "Umur": "11",
+                "Jumlah siswa": "5"
+            },
+            {
+                "Umur": "12",
+                "Jumlah siswa": "6"
+            },
+            {
+                "Umur": "13",
+                "Jumlah siswa": "8"
+            },
+            {
+                "Umur": "14",
+                "Jumlah siswa": "4"
+            },
+            {
+                "Umur": "15",
+                "Jumlah siswa": "2"
+            }
+        ],
+        "Pernyataan yang sesuai dengan tabel adalah ...",
+        "a" : "Banyak siswa yang berumur 11 ada 7 orang",
+        "b" : "Siswa yang berumur 12 lebih sedikit daripada siswa yang 
+        berumur 14",
+        "c" : "Jumlah siswa yang berumur 15 ada 8 orang",
+        "d" : "Siswa yang berumur 13 lebih besar dari pada siswa berumur 
+        12",
+        "e" : "Banyak siswa yang berumur 11 ada 9 orang",
+        "benar" : "d"
+    },
+    {
+        "soal7" : "Bu guru sedang melakukan pemeriksaan barang yang tidak boleh 
+        dibawa dikelas, Seperti mainan dan buku komik",
+        [
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Fery",
+                "Tika": "Dito"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Kana",
+                "Tika": "Mety"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Deni",
+                "Tika": "Tono"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Sinta",
+                "Tika": "Anto"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic2.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Yiyi",
+                "Tika": "Kiki"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "game2.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "comic.png",
+                    "style": "width: 70px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "game.png",
+                    "style": "width: 70px; height: auto;"
+                }",
+                "Tono": "Cika",
+                "Tika": "Eka"
+            }
+        ],
+        "Dari tabel di atas yang tidak membawa mainan dan buku komik 
+        adalah ...",
+        "a" : "Tika, Dito, dan Mety",
+        "b" : "Kana, Yiyi dan Anto",
+        "c" : "Fery, Kana, dan Sinta",
+        "d" : "Tono, Anto, dan Eka",
+        "e" : "Kiki, Cika, dan Kana",
+        "benar" : "b"
+    },
+    {
+        "soal8" : "Nilai ulangan Bahasa Indonesia siswa kelas IV adalah sebagai 
+        berikut. <br>
+        75 75 80 95 70 75 70 85 90 90 65 85 65 80 80 <br> 
+        80 60 70 70 80 85 80 90 95 85 90 75 85 80 80 <br>
+        Dibawah ini diagram yang sesuai dengan data diatas adalah",
+        "a" : {
+            "tag": "img",
+            "src": "9a.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "b" : {
+            "tag": "img",
+            "src": "9b.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "c" : {
+            "tag": "img",
+            "src": "9c.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "d" : {
+            "tag": "img",
+            "src": "9d.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "e" : {
+            "tag": "img",
+            "src": "9e.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "benar" : "a"
+    },
+    {
+        "soal9" : "Perhatikan diagram dibawah ini.",
+        {
+            "tag": "img",
+            "src": "10.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Penjualan mana yang lebih dari 150 ada pada tahun adalah ...",
+        "a" : "2022",
+        "b" : "2021",
+        "c" : "2020",
+        "d" : "2019",
+        "e" : "2018",
+        "benar" : "b"
+    },
+    {
+        "soal10" : "Berikut ini data tinggi badan 20 orang siswa (dalam cm). <br>
+        125, 130, 128, 128, 127, 132, 133, 135, 132, 129, <br>
+        132, 133, 127, 128, 132, 136, 130, 131, 129, 132. <br>
+        Berikut tabel yang tepat dengan data diatas adalah",
+        "a" : "[
+            {
+                "125": "1",
+                "127": "2",
+                "128": "3",
+                "129": "2",
+                "130": "2",
+                "131": "1",
+                "132": "5",
+                "133": "2",
+                "135": "1",
+                "136": "1",
+                "Tinggi Badan": "Banyak Siswa"
+            }
+        ]",
+        "b" : "[
+            {
+                "125": "3",
+                "127": "3",
+                "128": "1",
+                "129": "2",
+                "130": "1",
+                "131": "2",
+                "132": "2",
+                "133": "3",
+                "135": "2",
+                "136": "1",
+                "Tinggi Badan": "Banyak Siswa"
+            }
+        ]",
+        "c" : "[
+            {
+                "125": "1",
+                "127": "3",
+                "128": "3",
+                "129": "2",
+                "130": "1",
+                "131": "1",
+                "132": "3",
+                "133": "2",
+                "135": "2",
+                "136": "2",
+                "Tinggi Badan": "Banyak Siswa"
+            }
+        ]",
+        "d" : "[
+            {
+                "125": "1",
+                "127": "3",
+                "128": "3",
+                "129": "1",
+                "130": "1",
+                "131": "2",
+                "132": "2",
+                "133": "2",
+                "135": "2",
+                "136": "3",
+                "Tinggi Badan": "Banyak Siswa"
+            }
+        ]",
+        "e" : "[
+            {
+                "125": "1",
+                "127": "2",
+                "128": "3",
+                "129": "2",
+                "130": "2",
+                "131": "1",
+                "132": "5",
+                "133": "2",
+                "135": "1",
+                "136": "1",
+                "Tinggi Badan": "Banyak Siswa"
+            }
+        ]",
+        "benar" : "a"
+    },
+    {
+        "soal11" : "Berikut adalah berat badan dalam kg siswa kelas IV!",
+        {
+            "tag": "img",
+            "src": "12.png",
+            "style": "width: 350px; height: auto;"
+        },
+        "Pada tabel siswa yang memiliki berat tertinggi adalah",
+        "a" : "33",
+        "b" : "25",
+        "c" : "30",
+        "d" : "32",
+        "e" : "28",
+        "benar" : "c"
+    },
+    {
+        "soal12" : "[
+            {
+                "Tinggi Badan": "145",
+                "Jumlah Siswa": "11"
+            },
+            {
+                "Tinggi Badan": "147",
+                "Jumlah Siswa": "8"
+            },
+            {
+                "Tinggi Badan": "148",
+                "Jumlah Siswa": "7"
+            },
+            {
+                "Tinggi Badan": "150",
+                "Jumlah Siswa": "4"
+            },
+            {
+                "Tinggi Badan": "152",
+                "Jumlah Siswa": "2"
+            }
+        ]
+        Berikut ini diagram yang tepat dengan tabel diatas adalah",
+        "a" : "{
+            "tag": "img",
+            "src": "13a.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "b" : "{
+            "tag": "img",
+            "src": "13b.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "c" : "{
+            "tag": "img",
+            "src": "13c.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "d" : "{
+            "tag": "img",
+            "src": "13d.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "e" : "{
+            "tag": "img",
+            "src": "13e.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "benar" : "e",
+    },{
+        "soal13" : "{
+            "tag": "img",
+            "src": "13e.png",
+            "style": "width: 350px; height: auto;"
+        }
+        Banyak siswa yang memiliki tinggi badannya lebih dari 150 cm ada",
+        "a" : "4 orang",
+        "b" : "6 orang",
+        "c" : "7 orang",
+        "d" : "5 orang",
+        "e" : "8 orang",
+        "benar" : "b"
+    },
+    {
+        "soal14" : "{
+            "tag": "img",
+            "src": "13e.png",
+            "style": "width: 350px; height: auto;"
+        } <br> 
+        Banyak siswa yang memiliki tinggi badannya kurang dari 148 cm ada ... ",
+        "a" : "13 orang",
+        "b" : "15 orang",
+        "c" : "20 orang",
+        "d" : "19 orang",
+        "e" : "18 orang",
+        "benar" : "d"
+    },
+    {
+        "soal15" : "Perhatikan tabel dibawah ini. <br>
+        {
+            "tag": "img",
+            "src": "16.png",
+            "style": "width: 350px; height: auto;"
+        } <br> 
+        Pernyataan yang tepat tentang diagram adalah",
+        "a" : "Pada minggu ke 1 merupakan penjualan pensil paling tinggi",
+        "b" : "Pada minggu ke 4 merupakan penjualan pulpen paling rendah",
+        "c" : "Pada minggu ke 2 penjualan pulpen paling rendah",
+        "d" : "Pada minggu ke 3 merupakan penjualan pulpen dan pensil 
+        paling rendah",
+        "e" : "Pada minggu ke 3 merupakan penjualan pensil paling rendah",
+        "benar" : "c"
+    },
+    {
+        "soal16" : "Berikut ini data tinggi badan 20 orang siswa (dalam cm). <br>
+        125, 130, 128, 128, 127, 132, 133, 135, 132, 129, <br>
+        132, 133, 127, 128, 132, 136, 130, 131, 129, 132. <br>
+        Dibawah ini berupakan diagram yang tepat untuk data diatas.",
+        "a" : "{
+            "tag": "img",
+            "src": "17a.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "b" : "{
+            "tag": "img",
+            "src": "17b.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "c" : "{
+            "tag": "img",
+            "src": "17c.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "d" : "{
+            "tag": "img",
+            "src": "17d.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "e" : "{
+            "tag": "img",
+            "src": "17e.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "benar" : "a"
+    },
+    {
+        "soal17" : "Berikut adalah buah kesukaan beberapa siswa kelas 4 <br>
+        [
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }"
+            },
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }"
+            }
+        ] <br>
+        Dibawah ini yang merupakan tabel yang sesuai dengan data diatas adalah ...",
+        "a" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "3",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "7",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ]",
+        "b" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "4",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "6",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "8",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "2",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ]",
+        "c" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "6",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "4",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "7",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "3",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ]",
+        "d" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "3",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "7",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "7",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "3",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ]",
+        "e" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "4",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "6",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "4",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "6",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ]",
+        "benar" : "c"
+    },{
+        "soal18" : "[
+            {
+                "{
+                    "tag": "img",
+                    "src": "orange.png",
+                    "style": "width: 40px; height: auto;"
+                }": "6",
+                "{
+                    "tag": "img",
+                    "src": "banana.png",
+                    "style": "width: 40px; height: auto;"
+                }": "4",
+                "{
+                    "tag": "img",
+                    "src": "apple.png",
+                    "style": "width: 40px; height: auto;"
+                }": "5",
+                "{
+                    "tag": "img",
+                    "src": "mango.png",
+                    "style": "width: 40px; height: auto;"
+                }": "7",
+                "{
+                    "tag": "img",
+                    "src": "guava.png",
+                    "style": "width: 40px; height: auto;"
+                }": "3",
+                "Jenis Buah": "Jumlah Buah"
+            }
+        ] <br>
+        Dibawah ini yang merupakan diagram yang sesuai dengan data diatas adalah",
+        "a" : "{
+            "tag": "img",
+            "src": "19a.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "b" : "{
+            "tag": "img",
+            "src": "19b.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "c" : "{
+            "tag": "img",
+            "src": "19c.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "d" : "{
+            "tag": "img",
+            "src": "19d.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "e" : "{
+            "tag": "img",
+            "src": "19e.png",
+            "style": "width: 350px; height: auto;"
+        }",
+        "benar" : "e"
+    },
+    {
+        "soal19" : "{
+            "tag": "img",
+            "src": "19e.png",
+            "style": "width: 350px; height: auto;"
+        } <br>
+        Pernyataan yang tepat tentang data buah kesukaan siswa kelas 4 adalah",
+        "a" : "Jeruk merupakan buah yang paling banyak disukai siswa",
+        "b" : "Pisang dan Jambu merupakan buah yang kurang disukai siswa",
+        "c" : "Mangga dan Jambu merupakan buah yang kurang banyak disukai siswa",
+        "d" : "Jambu merupakan buah yang paling banyak disukai siswa",
+        "e" : "Apel merupakan buah yang sedikit disukai siswa",
+        "benar" : "b"
+    }
+]

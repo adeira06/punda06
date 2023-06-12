@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Data</title>
+    <link rel="stylesheet" href="kuis2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+    <div class="konten">
+		<div class="ujikompetensi">
+			<div class="submateri2">
+				<div class="judul">
+				<h2 class="text-left" style="width:60%;float:left;margin-right: 100px;">Kuis Data</h2>
+				<div class="btn btn-dark" id="time" style="float:right; border-radius: 20px; margin-left: 250px;background: #98d6e9; color:#ffffff; padding: 5px;">00 : 00</div> 
+				</div>
+				<div class="row">
+					<div class="nomor" >
+						<!-- column u/ pagination -->
+						<div class="card">
+							<div class="card-body number">
+								<span class ="number-btn text-center"></span>
+							</div>
+						</div>
+					</div>
+					<div class="soal">
+						<!-- column u/ tampil soal -->
+						<div class="card">
+							<div class="card-body">
+								<div class="quiz-container">
+									<div id="quiz"></div>
+								</div>
+								<div class="btn-action tombol" style="text-align: center;">
+									<button id="previous" class="btn btn-sm btn-secondary">Kembali</button>
+									<button id="next" class="btn btn-sm btn-success">Selanjutnya</button>
+									<button id="submit" class="btn btn-sm btn-danger">Selesai</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div> 
+	<script>
+		let p=1;
+		let q=1;
+		let tujuan=1;
+		function dropdown() {
+						document.getElementById("myDropdown").classList.toggle("show");
+					}
+		function dropdown2() {
+						document.getElementById("myDropdown2").classList.toggle("show");
+					}
+		function dropdown3() {
+						document.getElementById("myDropdown3").classList.toggle("show");
+					}
+		function dropdown4() {
+						document.getElementById("myDropdown4").classList.toggle("show");
+					}
+		function dropdown5() {
+						document.getElementById("myDropdown5").classList.toggle("show");
+					}
+		function dropdown6() {
+						document.getElementById("myDropdown6").classList.toggle("show");
+					}
+		function sidebar() {
+		  let konten = document.querySelector(".konten");
+		  konten.classList.toggle("opa");
+		  document.getElementById("sidebar").classList.toggle("show");
+		}
+		function petunjuk(){
+			if(p==1){
+				document.getElementById("petunjuk").style="display:none";
+				document.getElementById("petunjuka").style="border-radius:10px";
+				document.getElementById("petunjuka").innerHTML="Klik untuk menampilkan petunjuk";
+				p=0;
+			}
+			else{
+				document.getElementById("petunjuk").style="display:block";
+				document.getElementById("petunjuka").style="border-radius:10px 10px 0px 0px";
+				document.getElementById("petunjuka").innerHTML="Klik untuk menyembunyikan petunjuk";
+				p=1;
+			}
+		}
+		function petunjuk2(){
+			if(q==1){
+				document.getElementById("petunjuk2").style="display:none";
+				document.getElementById("petunjuka2").style="border-radius:10px";
+				document.getElementById("petunjuka2").innerHTML="Klik untuk menampilkan petunjuk";
+				console.log("tes");
+				q=0;
+			}
+			else{
+				document.getElementById("petunjuk2").style="display:block";
+				document.getElementById("petunjuka2").style="border-radius:10px 10px 0px 0px";
+				document.getElementById("petunjuka2").innerHTML="Klik untuk menyembunyikan petunjuk";
+				console.log("notes");
+				q=1;
+			}
+		}
+		
+		function tujuanP() {
+			if(tujuan==1){
+				document.getElementById("isiT").style.display="block";
+				document.getElementById("judulT").style="text-decoration:none";
+				tujuan=0;
+			}
+			else{
+				document.getElementById("isiT").style.display="none";
+				document.getElementById("judulT").style="text-decoration:underline";
+				tujuan=1;
+			}
+		}
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script>
+	// TANGGAL
+		let date = new Date();
+		let arrbulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+		let myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+		let hari = date.getDay();
+			hari = myDays[hari];
+		let millisecond = date.getMilliseconds();
+		let detik = date.getSeconds();
+		let menit = date.getMinutes();
+		let jam = date.getHours();
+		let tanggal = date.getDate();
+		let bulan = date.getMonth();
+			bulan = arrbulan[bulan];
+		let tahun = date.getFullYear();
+		let tanggalHariIni = hari+", "+tanggal+" "+bulan+" "+tahun;
+		let waktuSekarang = jam+" : "+menit+" : "+detik;
+		</script>
+	<script src="soalkuis2.js"></script>
+	<script>
+	let pil_user = [];
+	// menangkap jawaban pengguna dari soal acak
+	let jwb_urut = [];
+	// menyimpan jawaban pengguna yang sudah terurut
+	let jwb_urut_no = [];
+	// menangkap soal acak
+	let jwb_urut_no_fix = [];
+	//   menyimpan soal acak yang sudah terurut
+
+		let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
+		let sliceQuestion = randomQuestion.slice(0, 20)
+		let numberBtn = document.querySelector(".number")
+
+		for(i=0; i<sliceQuestion.length; i++){
+			let li = document.createElement("span")
+			li.innerHTML=
+			`
+			<button class="btn nosoal " onclick="paginationSlide(${i})">${i+1}</button>	
+			`
+
+			numberBtn.appendChild(li)
+
+		}
+
+		let nosoal = document.querySelectorAll(".nosoal")
+
+		function buildQuiz(){
+			const output = []
+			let currentNumber = 1
+
+			sliceQuestion.forEach((currentQuestion, questionNumber) =>{
+				const answers=[]
+
+				for(letter in currentQuestion.answers){
+					answers.push(
+						`
+							<label>
+								<input type="radio" name="question${questionNumber}" value="${letter}" id="${letter}. ${currentQuestion.answers[letter]}">
+								<span>${letter}. ${currentQuestion.answers[letter]}</span>
+							</label>
+						`
+					)
+				}
+
+				output.push(
+					`
+						<div class="slide">
+							<div class="question">${currentNumber}. ${currentQuestion.question}</div>
+							<hr/>
+							<div class="answers">${answers.join("")}</div>
+						</div>
+					`
+				)
+				currentNumber++
+				jwb_urut_no.push(currentQuestion.soal)
+			})
+			questionContainer.innerHTML = output.join("")
+		}
+
+		function results(){
+			const answerContainers = questionContainer.querySelectorAll('.answers')
+
+			let numCorrect = 0
+			let numWrong = 0
+			let userAnswer2 = [];
+
+			sliceQuestion.forEach((currentQuestion, questionNumber) => {
+				const answerContainer = answerContainers[questionNumber]
+				const selector = `input[name=question${questionNumber}]:checked`
+				const userAnswer = (answerContainer.querySelector(selector) || {}).value
+				pil_user.push(userAnswer);
+
+				if(userAnswer === currentQuestion.correctAnswer){
+					numCorrect++
+				}else{
+					numWrong++
+				}
+
+			})
+			sessionStorage.setItem('questionLength', sliceQuestion.length)
+			sessionStorage.setItem('correct', numCorrect)
+			sessionStorage.setItem('wrong', numWrong)
+			sessionStorage.setItem('tanggal', tanggalHariIni)
+			sessionStorage.setItem('waktu', waktuSekarang)
+			location.href = 'hasilkuis2.html'
+
+			for (let i = 0; i < jwb_urut_no.length; i++) {
+			for (let j = 0; j < jwb_urut_no.length; j++) {
+				if (i == jwb_urut_no[j]) {
+					jwb_urut.push(pil_user[j]);
+					jwb_urut_no_fix.push(jwb_urut_no[j])
+				}
+				}
+			}
+			sessionStorage.setItem("jawaban", JSON.stringify(jwb_urut))
+		}
+
+		function showSlide(n){
+			nosoal[currentSlide].classList.remove('btn-primary')
+			nosoal[currentSlide].classList.remove('nosoal2')
+			nosoal[n].classList.add('btn-primary')
+			nosoal[n].classList.add('nosoal2')
+
+			slides[currentSlide].classList.remove('active-slide')
+			slides[n].classList.add('active-slide')
+			currentSlide = n
+
+			if(currentSlide === 0){
+				previousButton.style.display = 'none'
+			} else {
+				previousButton.style.display = 'inline-block'
+			}
+
+			if(currentSlide === slides.length-1){
+				nextButton.style.display = 'none'
+				submitButton.style.display = 'inline-block'
+			} else {
+				nextButton.style.display = 'inline-block'
+				submitButton.style.display = 'none'
+			}
+
+
+		}
+
+		function showNextSlide(){
+			showSlide(currentSlide + 1)
+			// let tempatJawaban = questionContainer.querySelectorAll('.answers')
+			// let tJawaban = tempatJawaban[currentSlide]
+			// let selector2 = `input[name=question${currentSlide}]:checked`
+			// let jawaban = $(selector2).val();
+			// console.log(tempatJawaban)
+			// console.log(tJawaban)
+			// console.log(selector2)
+			// console.log(jawaban)
+		}
+
+		function showPreviousSlide(){
+			showSlide(currentSlide - 1)
+		}
+
+		function paginationSlide(n){
+			showSlide(n)
+		}
+		//DOM Show Question
+
+
+		let questionContainer = document.querySelector("#quiz")
+		let nextButton = document.querySelector("#next")
+		let previousButton = document.querySelector("#previous")
+		let submitButton = document.querySelector("#submit")
+		buildQuiz()
+		const slides = document.querySelectorAll(".slide")
+		let currentSlide = 0
+		showSlide(currentSlide)
+		submitButton.addEventListener("click", results)
+		nextButton.addEventListener("click", showNextSlide)
+		previousButton.addEventListener("click", showPreviousSlide)
+
+
+
+		let showTime = document.querySelector("#time")
+		let startMinute = 30
+		let seconds = 0
+
+		function countdown(){
+			setTimeout(countdown, 1000)
+			seconds = seconds<10 ? '0' + seconds : seconds
+			showTime.innerHTML = `${startMinute} : ${seconds}`
+
+			seconds--
+			if(seconds < 0){
+				seconds = 59
+				startMinute--
+			}
+			if(startMinute < 0){
+				startMinute = 0
+				seconds = 0
+			}
+			if(startMinute === 0 && seconds === 0){
+				results()
+			}
+
+			if(startMinute < 5){
+				// submitButton.removeAttribute("disabled", "")
+				showTime.classList.remove('btn-dark')
+				showTime.classList.add('btn-danger')
+				showTime.classList.remove('btn-md')
+				showTime.classList.add('btn-lg')
+				
+			}
+		}
+		// Fungsi untuk menyimpan jawaban ke Firebase
+function simpanJawabanKeFirebase() {
+var jawabanRef = database.ref("kuis-jawaban");
+
+jawabanRef.push(jawaban, function(error) {
+if (error) {
+  console.log("Gagal menyimpan jawaban ke Firebase: " + error);
+} else {
+  console.log("Jawaban berhasil disimpan ke Firebase");
+  window.location.href = "HasilK2.html";
+}
+});
+}
+		countdown()
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #3f548d;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #3f548d;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background:  rgba(154, 186, 220, 0.93);
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+
+.navbar #sidebar-close:hover {
+  color: #3f548d;
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  background: url(download.jpg);
+  background-attachment:fixed;
+  background-size: cover;
+}
+.main h1 {
+  color: #11101d;
+  font-size: 40px;
+  text-align: center;
+}
+
+.card{
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  border-radius: 10px;
+  width: 900px;
+  height: 470px;
+  margin-left: 100px;
+  align-items: center;
+  margin-top: 110px;
+  margin-right: 100px;
+}
+
+.card p{
+  font-size: 30px;
+  align-content: center;
+  font-weight: 500;
+}
+
+.card .content{
+  margin-top: 30px;
+  border: 3px dashed;
+  border-radius: 10px;
+  padding: 10px;
+  color: #000;
+  width: 800px;
+  height: 100px;
+  align-content: center;
+}
+
+.card .content img{
+  margin-top: 50px;
+}
+
+.card .content p{
+  font-size: 15px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 100px;
+  margin-left: 250px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 800px;
+  height: 300px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  margin-bottom: 200px;
+}
+
+.contentpop{
+  margin-top: 10px;
+  border: 3px dashed;
+  border-radius: 10px;
+  padding: 10px;
+  color: #000;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  width: 700px;
+  height: 300px;
+  align-content: center;
+}
+
+.popup h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+button {
+  background-color: #000500; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+button:hover {
+  background: #6ed7ed;
+  border: #000 dashed 2px;
+  color: #000;
+}

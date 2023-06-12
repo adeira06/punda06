@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="login siswa.css">
+</head>
+        <body>
+            <nav class="navbar">
+                <div class="title">PUNDA</div>
+                
+            </nav>
+            <main class="main">
+                <div class="card">
+                    <div class="content">
+                        <h3>Login Siswa</h3>
+                        <input type="number" placeholder="NISN" id="nisnInp"style="margin-top: 10px;">
+                        <input type="text" placeholder="Nama Lengkap" id="namaInp">
+                        <!-- <a href="registrasi.html" class="badge bg-secondary" style="margin-left: 30px;"> jika belum membuat akun ?</a> <br> -->
+                        <button type="text" id="sub_btn" class="btn btn-outline-primary" style="margin-top: 10px; margin-left: 84px;">Login</button>
+                        
+                    </div>
+                </div>
+            </main>
+                
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    
+        import { getDatabase, ref, set, push, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";  
+        
+        const firebaseConfig = {
+                apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+                authDomain: "punda-0612.firebaseapp.com",
+                databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+                projectId: "punda-0612",
+                storageBucket: "punda-0612.appspot.com",
+                messagingSenderId: "490129650306",
+                appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+                };
+        
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+    
+            const db = getDatabase();
+    
+            //--references--//
+            
+            let nama = document.getElementById("namaInp");
+            let nisn = document.getElementById("nisnInp");
+            let kls = document.getElementById("klsInp");
+            let login = document.getElementById("sub_btn");
+            
+            //proses autentikasi
+            login.addEventListener("click", (e) => { 
+                const dbRef = ref(db);
+                console.log(nisn.value)
+                get(child(dbRef, "siswa/" + nisn.value)).then((snapshot) =>  {
+                if (snapshot.exists()) {
+                    let dbnama = snapshot.val().nama;
+                    let dbnisn = snapshot.val().nisn;
+                    let dbkls = snapshot.val().kls;
+            
+                    if (dbnisn == nisn.value && dbnama == nama.value) {
+                    sessionStorage.setItem("nama", dbnama);
+                    sessionStorage.setItem("nisn", dbnisn);
+                    sessionStorage.setItem("kls", dbkls);        
+                    
+                    window.location ="pertama.html";
+                    } else {
+                        alert('NISN atau Nama tidak valid');
+                    }
+                }
+                });
+            });
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>

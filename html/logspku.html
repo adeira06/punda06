@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logspku.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="title">PUNDA</div>
+		<!-- <a href="halme23.html"><i class="fas fa-arrow-right" style="float: right; cursor:pointer; font-size: 17px;"></i></a> -->
+	</nav>
+    <main class="main">
+        <div class="card"style="display: flex;"><br>
+            <div class="logo" style="margin-top: 20px; float: left;"><img src="52.png" alt=""></div>
+            <div class="content" style="float: right; margin-left: 50px; padding: 10px; margin-top: 10px;">
+                <p>Nama</p>
+                <input type="text" style="text-align: center; margin-left: 20px; width: 150px;" placeholder="Nama Lengkap" id="nama">
+                <p>No.Absen</p>
+                <input type="number" style="text-align: center; margin-left: 20px; width: 40px;" placeholder="No" id="absen">
+                <br>
+                <center><a href=""><button>Mulai</button></a></center>
+            </div>
+        </div>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        
+            import { getDatabase, ref, set, push, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";  
+            
+            const firebaseConfig = {
+                    apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+                    authDomain: "punda-0612.firebaseapp.com",
+                    databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+                    projectId: "punda-0612",
+                    storageBucket: "punda-0612.appspot.com",
+                    messagingSenderId: "490129650306",
+                    appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+                    };
+            
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+        
+                const db = getDatabase();
+        
+            //--references--//
+            
+            let nama = document.getElementById("nama");
+            let absen = document.getElementById("absen");
+            let login = document.getElementById("sub_btn");
+            
+            //proses autentikasi
+            login.addEventListener("click", (e) => { 
+                const dbRef = ref(db);
+                console.log(absen.value)
+                get(child(dbRef, "logkuis1/" + absen.value)).then((snapshot) =>  {
+                if (snapshot.exists()) {
+                    let dbnama = snapshot.val().nama;
+                    let dbabsen = snapshot.val().absen;
+            
+                    if (dbabsen == absen.value && dbnama == nama.value) {
+                    sessionStorage.setItem("nama", dbnama);
+                    sessionStorage.setItem("absen", dbabsen);       
+                    
+                    window.location ="Kuis1.html";
+                    } else {
+                        alert("nama atau absen tidak sesuai");
+                    }
+                }
+                });
+            });
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>

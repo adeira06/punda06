@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pertama.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">PUNDA</a>
+        <div class="menu-content">
+        <ul class="menu-items">
+            <li class="item">
+            <a href="utama.html">Beranda</a>
+            </li>
+            <li class="item">
+                <a href="halme21.html">Apersepsi</a>
+            </li>
+            <li class="item">
+            <div class="submenu-item">
+                <span>Materi</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+                <div class="menu-title">
+                <i class="fas fa-chevron-left"></i>
+                Kembali
+                </div>
+                <li class="item">
+                    <a href="pertama.html">Pengenalan Penyusunan Data</a>
+                </li>
+                <li class="item">
+                <a href="halme23.html">Cara Penyusunan Tabel</a>
+                </li>
+                <li class="item">
+                <a href="halme22.html">Cara Penyusunan Data</a>
+                </li>
+            </ul>
+            </li>
+        <li class="item">
+            <a href="halamanevaluasi.html">Evaluasi</a>
+        </li>
+        <li class="item">
+            <a href="utama.html">Keluar</a>
+        </li>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <i class="fas fa-bars" id="sidebar-close"></i>
+    </nav>
+    <main class="main">
+        <div class="card">
+            <a href="halme23.html"><i class="fas fa-arrow-right" style="float: right; cursor:pointer; font-size: 17px;"></i></a>
+            <p>DATA</p>
+                    <img src="ng.png" alt="" style="width:300px; height:250px; margin-left: 300px;">
+                    <div class="content" style="margin-left: 25px; margin-bottom: 5px;">
+                        <p style="margin-bottom: 0px;">Data merupakan catatan atas kumpulan fakta yang dibuat 
+                            dengan kata-kata, kalimat, simbol, angka, dan lainnya. Data memiliki jenis yaitu 
+							<a href="#dapri" onclick="myFunction()"><button>data primer</button></a> dan
+							<a href="#dasek" onclick="myFunction()"><button>data sekunder</button></a>. Data juga mempunyai bentuk data yaitu :
+							<a href="#tabel" onclick="myFunction()"><button>tabel</button></a>, 
+							<a href="#diag" onclick="myFunction()"><button>diagram</button></a>,
+							<a href="#pikto" onclick="myFunction()"><button>piktogram</button></a>,
+							<!-- <a href="#diagg" onclick="myFunction()"><button>diagram gambar</button></a> -->
+							<a href="#diagb" onclick="myFunction()"><button>diagram batang</button></a></p>
+							</div>
+							<!-- <div class="navigasibawah" style="margin-top: 20px;">
+								<center>					
+								<a href="pertama.html"><button >Selanjutnya</button></a>
+								</center>
+							</div> -->
+                            <div id="dapri" class="overlay">
+                                <div class="popup">
+                                    <center><h1>Data Primer</h1></center>
+                                    <a class="close" href="#">&times;</a>
+                                    <img src="inter.png" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                    <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Data Primer merupakan data yang dikumpulkan secara langsung dari objek yang diteliti. 
+                                        Cara mendapatkan data dapat melalui wawancara atau tanya jawab secara langsung ke narasumber.
+                                        Contohnya data banyak siswa di kelas.
+                                    </p>
+                                </div>
+                                </div>
+                                <div id="dasek" class="overlay">
+                                    <div class="popup">
+                                        <center><h1>Data Sekundar</h1></center>
+                                        <a class="close" href="#">&times;</a>
+                                        <img src="dt.png" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px; margin-left: 20px;">
+                                        <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                            Data Sekunder merupakan data yang dikumpulkan biasanya berupa data tunggal 
+                                            dan berjumlah banyak untuk memudahkan untuk membaca
+                                            data biasanya disajikan dalam bentuk tabel, atau diagram 
+                                            seperti diagram batang, garis, gambar, dan lingkaran. 
+                                        </p>
+                                    </div>
+                                    </div>
+                                    <div class="overlay" id="tabel" >
+                                        <div class="popup">
+                                            <center><h1>Tabel</h1></center>
+                                            <a class="close" href="#">&times;</a>
+                                            <img src="table.png" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                            <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                                Tabel adalah daftar yang berisi kumpulan data, biasanya 
+                                                berupa kata atau angka, yang disusun oleh pembatas.
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="overlay" id="diag" >
+                                            <div class="popup">
+                                                <center><h1>Diagram</h1></center>
+                                                <a class="close" href="#">&times;</a>
+                                                <img src="diagram.png" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                                    Diagram adalah data yang berbentuk gambar yang terdiri dari banyak elemen
+                                                    dan bentuk seperti batang, lingkaran, garis dan 
+                                                    lainnya.
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="overlay" id="pikto" >
+                                                <div class="popup">
+                                                    <center><h1>Piktogram</h1></center>
+                                                    <a class="close" href="#">&times;</a>
+                                                    <img src="pikto.png" alt="" style="width: 350px; height: 150px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                    <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                                        Piktogram adalah tanda berupa gambar yang mengungkapkan pesan tertentu.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="overlay" id="diagg" >
+                                                <div class="popup">
+                                                    <center><h1>Diagram Gambar</h1></center>
+                                                    <a class="close" href="#">&times;</a>
+                                                    <img src="Exam.jpg" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                    <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                                        Diagram gambar merupakan diagram yang menyatakan suatu 
+                                                        peristiwa dengan kenyatan yang disederhanakan atau diperkecil.
+                                                    </p>
+                                                </div>
+                                                </div> -->
+                                                <div class="overlay" id="diagb" >
+                                                    <div class="popup">
+                                                        <center><h1>Diagram Batang</h1></center>
+                                                        <a class="close" href="#">&times;</a>
+                                                        <img src="diagram1.png" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                        <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">
+                                                            Diagram batang  merupakan diagram yang berbentuk batang dalam posisi tegak 
+                                                            (vertikel) atau horizontal.  Bagian bawah yang berisi jenis data dan 
+                                                            bagian kiri untuk menunjukkan banyak setiap jenis data.
+                                                        </p>
+                </div>
+                </div>
+                </div>
+                </main>
+    <script src="pertama.js"></script>
+</body>
+</html>

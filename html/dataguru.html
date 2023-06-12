@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="halguru.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">Akun Guru</a>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item">
+                    <a href="halamanguru.html">Data Siswa</a>
+                </li>
+                <li class="item">
+                    <a href="dataguru.html">Data Guru</a>
+                </li>
+            <li class="item">
+                <a href="rekaptugas.html">Rekap Tugas</a>
+            </li>
+            <!-- <li class="item">
+                <a href="profil.html">Profil</a>
+            </li> -->
+            <li class="item">
+                <div class="submenu-item">
+                    <span>Hasil Belajar</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="menu-items submenu">
+                    <div class="menu-title">
+                    <i class="fas fa-chevron-left"></i>
+                    Kembali
+                    </div>
+                    <li class="item">
+                    <a href="HasilK1.html">Kuis Tabel</a>
+                    </li>
+                    <li class="item">
+                        <a href="HasilK2.html">Kuis Data</a>
+                        </li>
+                    <li class="item">
+                    <a href="HasilEva.html">Evaluasi</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="utama.html">Keluar</a>
+            </li>
+            </div>
+    </nav>
+    <nav class="navbar">
+        <i class="fas fa-bars" id="sidebar-close"> Data Siswa</i>
+    </nav>
+    <main class="main">
+        <div class="card" style="height: 600px;">
+            <h1>Data Guru</h1>
+            <br>
+            <button onclick="tambahData()">Tambah Data</button>
+
+            <table id="tabel-siswa">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIP</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div id="form-popup" class="popup">
+                <div class="popup-content">
+                    <h2>Tambah Data Guru</h2>
+            <input type="text" id="nama-input" placeholder="Nama" required>
+            <input type="text" id="niP-input" placeholder="NIP" required>
+                    <button onclick="simpanData()">Simpan</button>
+                    <button onclick="tutupForm()">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script>
+        // Inisialisasi Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+            authDomain: "punda-0612.firebaseapp.com",
+            databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+            projectId: "punda-0612",
+            storageBucket: "punda-0612.appspot.com",
+            messagingSenderId: "490129650306",
+            appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        // Mendapatkan referensi ke tabel "guru" di Firebase Realtime Database
+        var guruRef = database.ref("guru");
+
+        // Mendapatkan referensi ke elemen tabel di HTML
+        var tabelguru = document.getElementById("tabel-siswa").getElementsByTagName("tbody")[0];
+
+        // Mendapatkan referensi ke popup form
+        var formPopup = document.getElementById("form-popup");
+
+        // Menampilkan data guru ke dalam tabel
+        guruRef.on("value", function (snapshot) {
+            tabelguru.innerHTML = "";
+
+            snapshot.forEach(function (childSnapshot) {
+                var key = childSnapshot.key;
+                var childData = childSnapshot.val();
+
+                var row = tabelguru.insertRow();
+
+                var namaCell = row.insertCell(0);
+                var nipCell = row.insertCell(1);
+                var aksiCell = row.insertCell(2);
+
+                namaCell.innerHTML = childData.nama;
+                nipCell.innerHTML = childData.nip;
+
+                var editButton = document.createElement("button");
+                editButton.innerHTML = "Edit";
+                editButton.onclick = function () {
+                    editData(key, childData.nama, childData.nip);
+                };
+                aksiCell.appendChild(editButton);
+
+                var hapusButton = document.createElement("button");
+                hapusButton.innerHTML = "Hapus";
+                hapusButton.onclick = function () {
+                    hapusData(key);
+                };
+                aksiCell.appendChild(hapusButton);
+            });
+        });
+
+        // Fungsi untuk menampilkan popup form
+        function tambahData() {
+            formPopup.style.display = "block";
+        }
+
+        // Fungsi untuk menyimpan data siswa baru ke Firebase
+        function simpanData() {
+            var nama = document.getElementById("nama-input").value;
+            var nip = document.getElementById("nip-input").value;
+
+            if (nama && nip && keterangan) {
+                var newData = guruRef.push();
+                newData.set({
+                    nama: nama,
+                    nip: nip
+                });
+
+                tutupForm();
+            }
+        }
+
+        // Fungsi untuk menutup popup form
+        function tutupForm() {
+            document.getElementById("nama-input").value = "";
+            document.getElementById("nip-input").value = "";
+
+            formPopup.style.display = "none";
+        }
+
+        // Fungsi untuk mengedit data siswa
+        function editData(key, nama, nip, pass, keterangan) {
+            document.getElementById("nama-input").value = nama;
+            document.getElementById("nip-input").value = nip;
+
+            formPopup.style.display = "block";
+
+            var simpanButton = document.createElement("button");
+            simpanButton.innerHTML = "Simpan";
+            simpanButton.onclick = function () {
+                simpanEditData(key);
+            };
+            document.getElementsByClassName("popup-content")[0].appendChild(simpanButton);
+        }
+
+        // Fungsi untuk menyimpan data siswa yang sudah diedit ke Firebase
+        function simpanEditData(key) {
+            var nama = document.getElementById("nama-input").value;
+            var nip = document.getElementById("nip-input").value;
+
+            if (nama && nip && pass && keterangan) {
+                var data = {
+                    nama: nama,
+                    nip: nip
+                };
+
+                guruRef.child(key).update(data);
+
+                tutupForm();
+            }
+        }
+
+        // Fungsi untuk menghapus data siswa dari Firebase
+        function hapusData(key) {
+            guruRef.child(key).remove();
+        }
+    </script>
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        const sidebarClose = document.querySelector("#sidebar-close");
+        const menu = document.querySelector(".menu-content");
+        const menuItems = document.querySelectorAll(".submenu-item");
+        const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+    
+        sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+    
+        menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            menu.classList.add("submenu-active");
+            item.classList.add("show-submenu");
+            menuItems.forEach((item2, index2) => {
+            if (index !== index2) {
+                item2.classList.remove("show-submenu");
+            }
+            });
+        });
+        });
+    
+        subMenuTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+            menu.classList.remove("submenu-active");
+      });
+    });
+    
+      </script>
+      </body>
+
+</html>

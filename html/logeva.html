@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Evaluasi</title>
+  <link rel="stylesheet" href="evalog.css".css">
+</head>
+<body>
+  <main class="main">
+    <div class="card">
+        <h1>Login Evaluasi</h1>
+  <form id="loginForm" style="margin-left: 100px; margin-top: 20px;">
+    <label for="username" style="margin-left: 100px; font-size: 17px;">Nama</label>
+    <input type="text" id="username" name="username" required>
+    <label for="kelas" style="margin-left: 100px; font-size: 17px;">Kelas</label>
+    <input type="number" id="kelas" name="kelas" required>
+    <button type="submit">Masuk</button>
+    </div>
+  </form>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+            apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+            authDomain: "punda-0612.firebaseapp.com",
+            databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+            projectId: "punda-0612",
+            storageBucket: "punda-0612.appspot.com",
+            messagingSenderId: "490129650306",
+            appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+            };
+
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+
+    var loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var usernameInput = document.getElementById("username");
+      var username = usernameInput.value;
+      var kelasInput = document.getElementById("kelas");
+      var kelas = kelasInput.value
+
+      // Simpan nama pengguna ke Firebase
+      var penggunaRef = database.ref("logineva");
+      penggunaRef.push({ username: username, kelas:kelas })
+        .then(function() {
+          // Redirect ke halaman evaluasi setelah berhasil login
+          window.location.href = "evaluasi.html";
+        })
+        .catch(function(error) {
+          console.log("Gagal menyimpan data pengguna ke Firebase: " + error);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="halme21.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">PUNDA</a>
+        <div class="menu-content">
+        <ul class="menu-items">
+            <li class="item">
+            <a href="utama.html">Beranda</a>
+            </li>
+            <li class="item">
+                <a href="halme21.html">Apersepsi</a>
+            </li>
+            <li class="item">
+            <div class="submenu-item">
+                <span>Materi</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+                <div class="menu-title">
+                <i class="fas fa-chevron-left"></i>
+                Kembali
+                </div>
+                <li class="item">
+                    <a href="pertama.html">Pengenalan Penyusunan Data</a>
+                </li>
+                <li class="item">
+                <a href="halme23.html">Cara Penyusunan Tabel</a>
+                </li>
+                <li class="item">
+                <a href="halme22.html">Cara Penyusunan Data</a>
+                </li>
+            </ul>
+            </li>
+        <li class="item">
+            <a href="halamanevaluasi.html">Evaluasi</a>
+        </li>
+        <li class="item">
+            <a href="utama.html">Keluar</a>
+        </li>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <i class="fas fa-bars" id="sidebar-close"></i>
+    </nav>
+    <main class="main">
+        <div class="card">
+        <p style="text-align: center;">MENGUMPULKAN DAN PENAYAJIAN DATA</p>
+                    <img src="diagram.png" alt="" style="width:300px; height:auto; margin-left: 290px;">
+                    <div class="content" style="margin-left: 30px; margin-bottom: 5px;">
+                        <p style="margin-bottom: 0px;">Pengumpulan data adalah cara atau teknik yang digunakan untuk 
+							mengumpulkan informasi, biasanya melalui 
+							<a href="#angket" onclick="myFunction()"><button>Angket</button></a>
+							<a href="#wawancara" onclick="myFunction()"><button>Wawancara</button></a>
+							<a href="#observasi" onclick="myFunction()"><button>Observasi</button></a> 
+							<a href="#tes" onclick="myFunction()"><button>Tes</button></a>
+							<a href="#dokumentasi" onclick="myFunction()"><button>Dokumentasi</button></a></p>
+							</div>
+							<div class="navigasibawah" style="margin-top: 20px;">
+								<center>					
+								<a href="pertama.html"><button >Selanjutnya</button></a>
+								</center>
+							</div>
+                            <div id="angket" class="overlay">
+                                <div class="popup">
+                                    <center><h1>Angket</h1></center>
+                                    <a class="close" href="#">&times;</a>
+                                    <img src="write.gif" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                    <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Angket atau kuesioner merupakan teknik pengumpulan data dimana responden
+                                        diberikan berupa pertanyaan tertulis yang dapat dilakukan
+                                        secara tatap muka, bisa juga melalui telepon, komputer maupun surat
+                                    </p>
+                                </div>
+                                </div>
+                                <div id="wawancara" class="overlay">
+                                    <div class="popup">
+                                        <center><h1>Wawancara</h1></center>
+                                        <a class="close" href="#">&times;</a>
+                                        <img src="write.gif" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px; margin-left: 20px;">
+                                        <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Wawancara merupakan percakapan yang diarahkan ke topik tertentu
+                                            yang dilakukan secara lisan di mana dua orang atau lebih
+                                            yang saling berhadapan satu sama lain
+                                        </p>
+                                    </div>
+                                    </div>
+                                    <div class="overlay" id="observasi" >
+                                        <div class="popup">
+                                            <center><h1>Observasi</h1></center>
+                                            <a class="close" href="#">&times;</a>
+                                            <img src="How to find stock photography ideas that sell (backed by data).jpg" alt="" style="width: 300px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                            <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Observasi merupakan kegiatan untuk mengamati secara langsung
+                                                melalui pengamatan terhadapt objek lapangan tertentu
+                                                dengan tujuan memperoleh informasi yang berkaitan dengan objek tertentu
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="overlay" id="tes" >
+                                            <div class="popup">
+                                                <center><h1>Tes</h1></center>
+                                                <a class="close" href="#">&times;</a>
+                                                <img src="Exam.jpg" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Tes merupakan teknik pengumpulan data yang dilakukan
+                                                    dengan memberikan serentetan soal atau tugas
+                                                    serta alat lainnya kepada subjek yang diperlukan datanya
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div class="overlay" id="dokumentasi" >
+                                                <div class="popup">
+                                                    <center><h1>Dokumentasi</h1></center>
+                                                    <a class="close" href="#">&times;</a>
+                                                    <img src="Exam.jpg" alt="" style="width: 200px; height: 200px; margin-left: 10px; float:left; margin-bottom: 50px;">
+                                                    <p style="text-align:justify; font-size: 17px; margin-left: 10px; margin-right: 10px;">Dokumentasi adalah suatu cara untuk memperoleh
+                                                        data dan informasi dalam bentuk buku, arsip, dokumen,
+                                                        tulisan angka dan gambar yang berupa laporan serta 
+                                                        keterangan yang dapat mendukung penelitian
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </main>
+    <script src="halme21.js"></script>
+</body>
+</html>

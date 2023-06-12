@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    background: url(download.jpg);
+    background-attachment:fixed;
+    background-size: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.konten{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	background: #fff;
+	padding: 20px;
+	width: 1140px;
+	height: 660px;
+	padding: 20px;
+	border-radius: 20px;
+	border: 2px dashed #7182c8;
+	align-items: center;
+}
+.konten1{
+	margin-top: 60px;
+	margin-bottom: 50px;
+	margin-left: 200px;
+	margin-right: 200px;
+	background: #fff;
+	padding: 20px;
+	width: 840px;
+	height: 460px;
+	padding: 20px;
+	border-radius: 20px;
+	border: 2px dashed #7182c8;
+}
+.konten2{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-left: 250px;
+	margin-right: 200px;
+	background: #fff;
+	padding: 20px;
+	width: 800px;
+	height: 500px;
+	padding: 20px;
+	border-radius: 20px;
+	border: 2px dashed #7182c8;
+}
+.ujikompetensi{
+	width: 100%;
+	background: #fff;
+  height: auto;
+}
+.submateri {
+	background: #fff;
+	display: block;
+}
+.konten .judul{
+	display: flex;
+	text-align: center;
+}
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.row .nomor{
+	margin-top: 40px;
+	background: #6abfdd;
+	color: #000;
+	border-radius: 20px;
+	border: 2px dashed #fff;
+	float: left;
+	height: 300px;
+	font-size: 23px;
+}
+.row .nomor .card{
+	margin-top: 25px;
+}
+.row .nomor .card .card-body span{
+	padding: 0px;
+	color: #000;
+}
+.soal {
+	margin-top: 20px;
+	float: right;
+	width: auto;
+}
+.slide{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:800px;
+	z-index:1;
+	display: none;
+	transition: opacity 0.5s;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+#ket{
+	
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+#new-score, #wrong-correct{
+	
+	font-family: "Poppins", sans-serif;
+}
+.active-slide{
+	display:block;
+	z-index:2;
+	overflow-y: scroll;
+	height: 450px;
+}
+
+.tombol .btn{
+	font-family: "Poppins", sans-serif;
+	font-size: 19px;
+	text-align: center;
+}
+.tombol .btn-secondary {
+	background: #8090d0;
+	color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+.tombol .btn-secondary:hover{
+	color: #8090d0;
+	background: #fff;
+}
+.tombol .btn-success {
+	background: #6add9a;
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+.tombol .btn-success:hover {
+	color: #6add9a;
+	background: #ffffff;
+}
+.tombol .btn-danger {
+	background: #df1313;
+	color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+.tombol .btn-danger:hover {
+	color: #df1313;
+	background: #fff;
+}
+.nomor{
+	width:20%;
+	margin:0 1%;
+}
+
+.soal{
+	width:800px;
+}
+
+.mrmin{
+	margin-right: -10px;
+}
+.card{
+	position: relative;
+	width: 100%;
+}
+.card-body{
+	margin-left: 20px;
+}
+.quiz-container{
+	position:relative;
+	float: right;
+	width:90%;
+	height: 500px;
+	margin-right: 50px;
+}
+
+#quiz, #quiz p{
+	font-size: 19px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.answers{
+	margin-bottom: 20px;
+	text-align:left;
+	display:inline-block;
+	margin-top: 10px;
+}
+.answers label{
+	display:block;
+	margin-bottom: 10px;
+	font-family: Poppins;
+	font-size:18px;
+}
+
+.nosoal2{
+  	color: white !important;
+  	cursor: pointer;
+  	font-family: 'Poppins', sans-serif !important;
+  	font-size: 14px;
+}
+
+.nosoal{
+	font-family: Poppins !important;
+	width:30%;
+	background: #7182c8;
+	color: #fff;
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+	padding: 0.3px;
+	margin-left: 20px;
+  }
+  table tr {
+	width: auto;
+  }
+  caption {
+	text-align: center;
+	margin-bottom: 1px;
+  }
+  table, th, td {
+	border: 1px solid black;
+  }
+  th, td {
+	padding: 0.5px;
+  }
+  td, input {
+	text-align: center;
+  }
+  th {
+	background-color: #4c95af;
+	color: white;
+  }
+
+@media only screen and(max-width:500px){
+	.quiz-container{
+		width: 300;
+		height:500px;
+	}
+	
+}
+
+@media only screen and(max-width:300px){
+	.quiz-container{
+		width: 500px;
+		height:700px;
+	}
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="halguru.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">Akun Guru</a>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item">
+                    <a href="halamanguru.html">Data Siswa</a>
+                </li>
+                <li class="item">
+                    <a href="dataguru.html">Data Guru</a>
+                </li>
+                <li class="item">
+                    <a href="rekaptugas.html">Rekap Tugas</a>
+                </li>
+                <li class="item">
+                  <a href="HasilBelajar.html">Hasil Belajar</a>
+              </li>
+                <!-- <li class="item">
+                <a href="profil.html">Profil</a>
+            </li> -->
+                <!-- <li class="item">
+                    <div class="submenu-item">
+                        <span>Hasil Belajar</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu">
+                        <div class="menu-title">
+                            <i class="fas fa-chevron-left"></i>
+                            Kembali
+                        </div>
+                        <li class="item">
+                            <a href="HasilK1.html">Kuis Tabel</a>
+                        </li>
+                        <li class="item">
+                            <a href="HasilK2.html">Kuis Data</a>
+                        </li>
+                        <li class="item">
+                            <a href="HasilEva.html">Evaluasi</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li class="item">
+                    <a href="utama.html">Keluar</a>
+                </li>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <i class="fas fa-bars" id="sidebar-close"> Data Siswa</i>
+    </nav>
+    <main class="main">
+        <div class="card" style="height: 500px;">
+        
+        <table id="example">
+            <thead>
+                <th>NAMA</th>
+                <th>KELAS</th>
+                <th>Kuis 1</th>
+                <th>Kuis 2</th>
+                <th>Evaluasi</th>
+            </thead>
+            <tbody>
+                <tr>
+                        <td id="nama"></td>
+                        <td id="kls"></td>
+                        <td id="k1"></td>
+                        <td id="k2"></td>
+                        <td id="eva"></td>
+                </tr>
+            </tbody>
+        </table>
+</main>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    
+    const firebaseConfig = {
+            apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+            authDomain: "punda-0612.firebaseapp.com",
+            databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+            projectId: "punda-0612",
+            storageBucket: "punda-0612.appspot.com",
+            messagingSenderId: "490129650306",
+            appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+
+var auth = firebase.auth();
+var database = firebase.database();
+var namaElement = document.getElementById('nama');
+var kelasElement = document.getElementById('kelas');
+var taskList = document.getElementById('task-list');
+
+// Mendengarkan perubahan status autentikasi pengguna
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+    // Pengguna sudah login
+    var uid = user.uid;
+
+    // Mendapatkan data kelas dari Firebase
+    database.ref('siswa/' + uid).once('value', function(snapshot) {
+      var userData = snapshot.val();
+      var kelasName = userData.kelas;
+      kelasNameElement.textContent = kelasName;
+
+      // Mendapatkan data tugas dari Firebase
+      database.ref('rekap-tugas/' + kelasName).on('value', function(snapshot) {
+        taskList.innerHTML = ''; // Mengosongkan daftar tugas sebelum mengisi kembali
+
+        snapshot.forEach(function(childSnapshot) {
+          var task = childSnapshot.val();
+          var taskId = childSnapshot.key;
+          var taskName = task.name;
+          var isDone = task.done || false;
+
+          var li = document.createElement('li');
+          var checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.checked = isDone;
+          checkbox.addEventListener('change', function(event) {
+            // Mengubah status pengerjaan tugas
+            var checked = event.target.checked;
+            database.ref('rekap-tugas/' + kelasName + '/' + taskId + '/done').set(checked);
+          });
+
+          var taskLink = document.createElement('a');
+          taskLink.href = task.link;
+          taskLink.className = 'task-link';
+          taskLink.textContent = taskName;
+
+          li.appendChild(checkbox);
+          li.appendChild(taskLink);
+          taskList.appendChild(li);
+        });
+      });
+    });
+  } else {
+    // Pengguna belum login, lakukan pengalihan ke halaman login
+    window.location.href = 'login.html';
+  }
+});
+
+
+
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const dataRef = ref(db, "rekap-tugas");
+    onValue(dataRef, (snapshot) => {
+        const data = snapshot.val();
+        // Proses data dan perbarui tampilan tabel
+        updateTable(data);
+    });
+    function updateTable(data) {
+        const tableBody = document.querySelector("tbody");
+        
+        // Hapus semua baris sebelum memperbarui tabel
+        tableBody.innerHTML = "";
+
+        // Perulangan untuk setiap siswa
+        for (const key in data) {
+            const siswa = data[key];
+            const { nama, kelas, k1, k2, eva } = siswa;
+
+            // Hitung persentase
+            const persenCs1 = (cs1 / 100) * 100;
+            const persenCs2 = (cs2 / 100) * 100;
+            const persenK1 = (k1 / 100) * 100;
+            const persenK2 = (k2 / 100) * 100;
+            const persenEva = (eva / 100) * 100;
+
+            // Buat baris siswa baru
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${nama}</td>
+                <td>${kelas}</td>
+                <td>${cs1} (${persenCs1}%)</td>
+                <td>${cs2} (${persenCs2}%)</td>
+                <td>${k1} (${persenK1}%)</td>
+                <td>${k2} (${persenK2}%)</td>
+                <td>${eva} (${persenEva}%)</td>
+            `;
+
+            // Tambahkan baris ke tabel
+            tableBody.appendChild(row);
+        }
+    }
+    onValue(dataRef, (snapshot) => {
+        const data = snapshot.val();
+        updateTable(data);
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+<script>
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarClose = document.querySelector("#sidebar-close");
+    const menu = document.querySelector(".menu-content");
+    const menuItems = document.querySelectorAll(".submenu-item");
+    const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+    sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+
+    menuItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        menu.classList.add("submenu-active");
+        item.classList.add("show-submenu");
+        menuItems.forEach((item2, index2) => {
+        if (index !== index2) {
+            item2.classList.remove("show-submenu");
+        }
+        });
+    });
+    });
+
+    subMenuTitles.forEach((title) => {
+    title.addEventListener("click", () => {
+        menu.classList.remove("submenu-active");
+  });
+});
+
+</script>
+</script>
+</body>
+</html>

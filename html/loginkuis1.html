@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+  <h1>Login</h1>
+
+  <form id="login-form">
+    <label for="nama-input">Nama:</label>
+    <input type="text" id="nama-input" required>
+    <button type="submit">Masuk</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+  <script>
+    // Inisialisasi Firebase
+var firebaseConfig = {
+            apiKey: "AIzaSyDJ9mU5RasjOHqw75x2LKoeHPucdBgYJHM",
+            authDomain: "punda-0612.firebaseapp.com",
+            databaseURL: "https://punda-0612-default-rtdb.firebaseio.com",
+            projectId: "punda-0612",
+            storageBucket: "punda-0612.appspot.com",
+            messagingSenderId: "490129650306",
+            appId: "1:490129650306:web:25c1508e93dc6faea7ba9b"
+            };
+
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+
+var loginForm = document.getElementById("login-form");
+
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var namaInput = document.getElementById("nama-input");
+  var nama = namaInput.value;
+
+  // Masukkan kode untuk autentikasi pengguna di sini (misalnya menggunakan Firebase Authentication)
+
+  // Setelah pengguna berhasil login, Anda dapat dialihkan ke halaman kuis.html
+  window.location.href = "Kuis1.html";
+});
+
+  </script>
+</body>
+</html>
